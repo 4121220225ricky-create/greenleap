@@ -627,7 +627,7 @@ footer a:hover{color:#fff}
 <!-- ASEAN MAP (static pre-built SVG) -->
 <div class="cw">
   <span class="ct" style="display:block;margin-bottom:.9rem">ASEAN ECI Geo Heatmap</span>
-  <svg viewBox="0 0 780 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:310px;border-radius:8px;cursor:pointer">    
+  <svg viewBox="0 0 780 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:310px;border-radius:8px;cursor:pointer">
     <!-- Myanmar --><rect x="115" y="42" width="85" height="75" rx="7" fill="#7B241C" stroke="#fff" stroke-width="1.5" onclick="toast('Myanmar: ECI Rank #83 — Ekspor Primer','i')"/><text x="157" y="72" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#fff">Myanmar</text><text x="157" y="86" text-anchor="middle" font-family="Arial" font-size="9" fill="#fff">#83</text>
     <!-- Laos --><rect x="208" y="38" width="60" height="70" rx="7" fill="#7B241C" stroke="#fff" stroke-width="1.5" onclick="toast('Laos: ECI Rank #90 — Pertanian','i')"/><text x="238" y="66" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#fff">Laos</text><text x="238" y="80" text-anchor="middle" font-family="Arial" font-size="9" fill="#fff">#90</text>
     <!-- Vietnam --><rect x="278" y="30" width="72" height="140" rx="7" fill="#E8A210" stroke="#fff" stroke-width="1.5" onclick="toast('Vietnam: ECI Rank #47 — Naik pesat dari #89!','s')"/><text x="314" y="92" text-anchor="middle" font-family="Arial" font-size="10" font-weight="700" fill="#333">Vietnam</text><text x="314" y="106" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">#47 ↑</text>
@@ -1246,11 +1246,11 @@ function filterPS(){
 // ─── YIF CHARTS ────────────────────────────────────────────────
 function buildYIF(){
   // Pie as stacked bar
-  const items=[{l:'A. Green Manufacturing',v:2T,c:'#A93226'},{l:'B. Deep Tech Patent',v:1.5T,c:'#D4880A'},{l:'C. Knowledge Networks',v:1.5T,c:'#E8A210'}];
+  const items=[{l:'A. Green Manufacturing',v:2000,c:'#A93226'},{l:'B. Deep Tech Patent',v:1500,c:'#D4880A'},{l:'C. Knowledge Networks',v:1500,c:'#E8A210'}];
   document.getElementById('yPie').innerHTML=items.map(it=>`
     <div class="skrow"><span class="sklbl" style="width:auto;min-width:0;font-size:.78rem;flex:1">${it.l}</span>
     <div style="width:140px;background:var(--bdr);height:22px;border-radius:3px;overflow:hidden;margin-left:.5rem">
-      <div style="height:100%;background:${it.c};width:${Math.round(it.v/5000*100)}%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-weight:700">${it.v}M</div>
+      <div style="height:100%;background:${it.c};width:${Math.round(it.v/5000*100)}%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-weight:700">IDR ${it.v}M</div>
     </div></div>`).join('');
   // Geo bar
   const gd=[{l:'Jawa',v:141,c:'#A93226'},{l:'Sumatera',v:52,c:'#C0562A'},{l:'Kalimantan',v:28,c:'#D4880A'},{l:'Sulawesi',v:18,c:'#E8A210'},{l:'Maluku/Papua',v:5,c:'#27ae60'},{l:'Nusa Tenggara',v:3,c:'#3498db'}];
